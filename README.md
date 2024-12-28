@@ -1,4 +1,4 @@
-# Custom churn predition using Amazon Sage Maker
+# 	Predict customer subscription for bank term deposit using Amazon Sage Maker
 
 ![](./img/MLOps-with-SageMaker-small.png)
 
