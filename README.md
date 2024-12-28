@@ -6,6 +6,7 @@
 Each notebook helps with different steps in the lifecycle of a model, from experimentation to deployment, as well as monitoring and retraining.
 ![](img/sagemaker-mlops-building-blocks.png)
 
+![](img/six-steps.png)
 
 ## 📄 Description
 
@@ -34,15 +35,15 @@ Added monitoring for both data and model, tracking various properties such as da
 2. [Deployment/CD Pipeline](https://github.com/rinkusahu1/sage-maker-ci-cd-pipeline-customer-churn-pred/tree/deploy)
 
 ## ⚡️ Important Tips:
-1. Avoid Using SageMaker MLFlow Tracking:
+1. **Avoid Using SageMaker MLFlow Tracking:**
 SageMaker’s built-in MLFlow pipeline tracking can be costly and slow to start/stop. Instead, deploy MLFlow on an EC2 instance for efficient experiment tracking.
 
 # 🐞 Debugging Tips:
-1. When creating a SageMaker project, it’s important to ensure that the necessary permissions are correctly assigned. Most of the permission issues I encountered when creating a SageMaker project are related to the following roles:
-  **AmazonSageMakerServiceCatalogProductsCodePipelineRole:** Required for managing the SageMaker pipeline within AWS CodePipeline.
-  **AmazonSageMakerServiceCatalogProductsCodeBuildRole:** Needed for integrating with AWS CodeBuild to build and test SageMaker projects.
-  **AmazonSageMakerServiceCatalogProductsLaunchRole:** Essential for launching and managing resources in SageMaker during project execution.
-2. CI/CD Pipeline Debugging:
+**1.  When creating a SageMaker project, it’s important to ensure that the necessary permissions are correctly assigned. Most of the permission issues I encountered when creating a SageMaker project are related to the following roles:**
+  - AmazonSageMakerServiceCatalogProductsCodePipelineRole: Required for managing the SageMaker pipeline within AWS CodePipeline.
+  - AmazonSageMakerServiceCatalogProductsCodeBuildRole: Needed for integrating with AWS CodeBuild to build and test SageMaker projects.
+  - AmazonSageMakerServiceCatalogProductsLaunchRole: Essential for launching and managing resources in SageMaker during project execution.
+2. **CI/CD Pipeline Debugging:**
 When creating or testing CI/CD pipelines, review the logs in CodeBuild, CodeDeploy, and Pipeline sections to diagnose issues effectively.
 
 
